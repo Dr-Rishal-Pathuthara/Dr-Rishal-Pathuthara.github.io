@@ -4,21 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
 
-  <title>Rishal Pathuthara | AI in Healthcare & Oral Health Research</title>
-  <meta name="description" content="Academic portfolio of Rishal Pathuthara, PhD Scholar at McGill University. Research interests include AI in healthcare, oral cancer detection, multimodal AI and clinical decision support.">
-  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Academic profile and research portfolio of Rishal Pathuthara, PhD Scholar at McGill University, with interests in oral pathology, oral cancer detection, artificial intelligence, and evidence-informed clinical practice.">
+
+  <title>Rishal Pathuthara | Academic & Research Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #090909;
-      --surface: #131313;
-      --surface-light: #191714;
+      --bg: #080808;
+      --surface: #111111;
+      --surface-light: #181818;
       --gold: #d8b568;
-      --gold-light: #f2d99b;
-      --text: #f7f3e9;
-      --muted: #b8b2a6;
-      --border: rgba(216, 181, 104, 0.24);
+      --gold-light: #f0d99c;
+      --text: #f4f0e8;
+      --muted: #aaa49a;
+      --border: rgba(216, 181, 104, 0.25);
       --max-width: 1120px;
     }
 
@@ -30,23 +35,20 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 90px;
+      scroll-padding-top: 85px;
     }
 
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Inter", sans-serif;
       line-height: 1.75;
+      overflow-x: hidden;
     }
 
     a {
       color: inherit;
-    }
-
-    a:focus-visible {
-      outline: 2px solid var(--gold);
-      outline-offset: 5px;
+      text-decoration: none;
     }
 
     .container {
@@ -54,363 +56,464 @@
       margin-inline: auto;
     }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(9, 9, 9, 0.94);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav {
-      min-height: 76px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .brand {
-      color: var(--gold);
-      text-decoration: none;
-      font-family: Georgia, serif;
-      font-size: 19px;
-      font-weight: bold;
-      white-space: nowrap;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 17px;
-    }
-
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 12px;
-      transition: color 0.25s;
-    }
-
-    nav a:hover {
-      color: var(--gold-light);
-    }
-
-    .hero {
-      min-height: 620px;
-      display: flex;
-      align-items: center;
-      overflow: hidden;
-      position: relative;
-      background:
-        radial-gradient(ellipse at 90% 18%,
-          rgba(216,181,104,0.15), transparent 38%),
-        radial-gradient(ellipse at 10% 100%,
-          rgba(216,181,104,0.07), transparent 40%),
-        linear-gradient(125deg, #090909, #15120c);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .hero-content {
-      padding-block: 95px;
-      animation: fade-up 1s ease both;
-    }
-
-    .eyebrow,
-    .section-label {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 11px;
-      font-weight: bold;
-    }
-
-    .eyebrow {
-      margin-bottom: 22px;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: normal;
-      line-height: 1.23;
-    }
-
-    h1 {
-      max-width: 900px;
-      font-size: clamp(39px, 7vw, 73px);
-      letter-spacing: -1.6px;
-      margin-bottom: 25px;
-    }
-
-    h1 span,
     .gold {
       color: var(--gold);
     }
 
-    .intro {
-      max-width: 720px;
-      color: var(--muted);
-      font-size: 16px;
-      margin-bottom: 25px;
+    .eyebrow {
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 15px;
     }
 
-    .affiliation {
-      border-left: 2px solid var(--gold);
-      padding-left: 16px;
-      margin-bottom: 30px;
-      font-size: 14px;
-      color: var(--text);
+    h1, h2, h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 500;
+      line-height: 1.15;
     }
 
-    .affiliation span {
-      color: var(--muted);
-    }
-
-    .actions,
-    .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .button {
-      display: inline-block;
-      text-align: center;
-      border: 1px solid var(--gold);
-      border-radius: 3px;
-      padding: 11px 20px;
-      font-size: 13px;
-      text-decoration: none;
-      transition: transform 0.25s, background 0.25s,
-                  color 0.25s;
-    }
-
-    .button.primary {
-      background: var(--gold);
-      color: #111;
-      font-weight: bold;
-    }
-
-    .button:hover {
-      background: var(--gold-light);
-      color: #111;
-      transform: translateY(-3px);
-    }
-
-    section {
-      padding-block: 82px;
-    }
-
-    .section-label {
-      margin-bottom: 12px;
+    h1 {
+      font-size: clamp(3.1rem, 7vw, 5.8rem);
+      letter-spacing: -0.035em;
     }
 
     h2 {
-      font-size: clamp(30px, 5vw, 43px);
-      margin-bottom: 22px;
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      margin-bottom: 18px;
     }
 
-    .gold-line {
-      height: 2px;
-      width: 54px;
+    h3 {
+      font-size: 1.65rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 45px;
+    }
+
+    .section-heading p {
+      max-width: 650px;
+    }
+
+    /* Navigation */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 8, 8, 0.94);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      width: min(var(--max-width), 92%);
+      min-height: 76px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.78rem;
+      color: var(--muted);
+      transition: color 0.25s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--gold);
+    }
+
+    /* Hero */
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 80% 30%, rgba(216, 181, 104, 0.09), transparent 38%),
+        linear-gradient(135deg, #080808 45%, #11100d 100%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      border: 1px solid rgba(216, 181, 104, 0.10);
+      border-radius: 50%;
+      right: -130px;
+      bottom: -170px;
+      pointer-events: none;
+    }
+
+    .hero-layout {
+      width: min(var(--max-width), 88%);
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 270px;
+      align-items: center;
+      gap: 55px;
+      padding-block: 85px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-content {
+      min-width: 0;
+      animation: fade-up 0.9s ease both;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero-subtitle {
+      margin-top: 20px;
+      color: var(--text);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    .intro {
+      margin-top: 17px;
+      max-width: 650px;
+    }
+
+    .affiliation {
+      margin-top: 22px;
+      padding-left: 15px;
+      border-left: 2px solid var(--gold);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .hero-photo-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      padding: 7px;
+      border: 1px solid var(--gold);
+      border-radius: 8px;
+      background: #101010;
+      box-shadow: 0 0 35px rgba(216, 181, 104, 0.16);
+      animation: fade-up 1.2s ease both, photo-glow 4s ease-in-out infinite;
+    }
+
+    .hero-photo {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 4px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 45px;
+      padding: 11px 20px;
+      border: 1px solid var(--gold);
+      border-radius: 3px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: background 0.25s ease, color 0.25s ease,
+                  transform 0.25s ease;
+    }
+
+    .btn-primary {
       background: var(--gold);
-      margin: 22px 0;
+      color: #111;
     }
 
-    .description {
-      color: var(--muted);
-      max-width: 830px;
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
     }
 
-    .section-intro {
-      color: var(--muted);
-      max-width: 760px;
-      margin-bottom: 30px;
+    .btn-secondary {
+      color: var(--gold);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(216, 181, 104, 0.10);
+      transform: translateY(-2px);
+    }
+
+    /* General content */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .about-copy p + p {
+      margin-top: 16px;
+    }
+
+    .profile-panel {
+      border: 1px solid var(--border);
+      padding: 28px;
+      background: linear-gradient(145deg, #141414, #0b0b0b);
+    }
+
+    .profile-item {
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .profile-item:last-child {
+      border-bottom: none;
+    }
+
+    .profile-label {
+      display: block;
+      color: var(--gold);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .profile-value {
+      color: var(--text);
+      font-size: 0.92rem;
+    }
+
+    /* Research cards */
+
+    .research-section {
+      background: #0c0c0c;
+      border-block: 1px solid rgba(255, 255, 255, 0.04);
     }
 
     .research-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 34px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
     }
 
-    .card {
-      background: linear-gradient(145deg, var(--surface), #10100e);
+    .research-card {
+      padding: 28px 24px;
+      background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 5px;
-      padding: 27px;
-      transition: transform 0.3s, border-color 0.3s,
-                  box-shadow 0.3s;
+      border-top: 2px solid var(--gold);
+      transition: transform 0.3s ease, background 0.3s ease,
+                  box-shadow 0.3s ease;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      border-color: var(--gold);
-      box-shadow: 0 12px 35px rgba(0,0,0,0.24);
+    .research-card:hover {
+      transform: translateY(-6px);
+      background: var(--surface-light);
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
     }
 
     .card-number {
       color: var(--gold);
-      font-size: 11px;
-      letter-spacing: 2px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 2.1rem;
+      margin-bottom: 15px;
     }
 
-    .card h3 {
-      font-size: 23px;
-      margin: 16px 0 13px;
+    .research-card h3 {
+      font-size: 1.55rem;
     }
 
-    .card p {
-      color: var(--muted);
-      font-size: 14px;
+    .research-card p {
+      font-size: 0.9rem;
     }
 
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 19px;
+    .research-tag {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--gold);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    .tag {
-      color: var(--gold-light);
-      background: rgba(216,181,104,0.08);
-      border: 1px solid var(--border);
-      border-radius: 3px;
-      padding: 4px 9px;
-      font-size: 11px;
+    .note {
+      margin-top: 25px;
+      font-size: 0.82rem;
+      font-style: italic;
     }
 
-    .dark-section {
-      background: #0e0e0d;
-      border-block: 1px solid var(--border);
-    }
+    /* Education */
 
     .timeline {
-      margin-top: 25px;
+      max-width: 850px;
+      border-left: 1px solid var(--gold);
+      margin-left: 8px;
     }
 
     .timeline-item {
-      display: flex;
-      gap: 20px;
-      padding: 24px 0;
-      border-bottom: 1px solid var(--border);
+      position: relative;
+      padding: 0 0 36px 30px;
     }
 
     .timeline-item:last-child {
-      border-bottom: 0;
+      padding-bottom: 0;
     }
 
-    .timeline-mark {
-      color: var(--gold);
-      font-size: 20px;
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 8px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 12px rgba(216, 181, 104, 0.35);
     }
 
     .timeline-item h3 {
-      font-size: 20px;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
     }
 
     .timeline-item p {
-      color: var(--muted);
-      font-size: 14px;
+      font-size: 0.92rem;
     }
 
-    .research-directions {
+    .timeline-meta {
+      color: var(--gold);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    /* Future directions */
+
+    .directions-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 30px;
+      gap: 18px;
     }
 
     .direction {
-      padding: 22px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 4px;
+      padding: 23px;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      background: linear-gradient(145deg, #121212, #0a0a0a);
     }
 
     .direction h3 {
-      font-size: 19px;
-      margin-bottom: 10px;
+      color: var(--gold-light);
+      font-size: 1.4rem;
     }
 
     .direction p {
-      font-size: 13px;
-      color: var(--muted);
+      font-size: 0.87rem;
     }
 
-    .contact-box {
-      padding: clamp(25px, 5vw, 50px);
-      border: 1px solid var(--border);
-      border-radius: 5px;
+    /* Contact */
+
+    .contact-section {
+      text-align: center;
       background:
-        radial-gradient(ellipse at 100% 0%,
-          rgba(216,181,104,0.10), transparent 50%),
-        var(--surface);
+        radial-gradient(ellipse at center, rgba(216, 181, 104, 0.07), transparent 65%),
+        #0b0b0b;
+      border-top: 1px solid var(--border);
     }
 
-    .contact-details {
-      display: grid;
-      gap: 16px;
-      margin-top: 27px;
-      color: var(--muted);
-      font-size: 14px;
+    .contact-content {
+      max-width: 730px;
+      margin-inline: auto;
     }
 
-    .contact-details strong {
-      color: var(--gold);
-      font-weight: normal;
+    .contact-content > p {
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    .contact-details a {
-      text-decoration: none;
-      overflow-wrap: anywhere;
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 30px;
     }
 
-    .contact-details a:hover {
-      color: var(--gold-light);
-    }
-
-    .social-links {
-      margin-top: 27px;
-    }
-
-    .social-links a {
-      color: var(--gold-light);
+    .contact-link {
       border: 1px solid var(--border);
+      padding: 11px 18px;
       border-radius: 3px;
-      padding: 9px 14px;
-      font-size: 13px;
-      text-decoration: none;
-      transition: background 0.25s;
+      color: var(--gold);
+      font-size: 0.85rem;
+      transition: background 0.25s ease;
     }
 
-    .social-links a:hover {
-      background: rgba(216,181,104,0.12);
+    .contact-link:hover {
+      background: rgba(216, 181, 104, 0.10);
     }
+
+    /* Footer */
 
     footer {
       padding: 25px 0;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--muted);
-      font-size: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
     }
 
-    footer span {
-      color: var(--gold);
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
     }
+
+    footer p {
+      font-size: 0.75rem;
+    }
+
+    /* Animations */
 
     @keyframes fade-up {
       from {
         opacity: 0;
-        transform: translateY(22px);
+        transform: translateY(18px);
       }
       to {
         opacity: 1;
@@ -418,341 +521,432 @@
       }
     }
 
-    @media (max-width: 760px) {
-      .nav {
-        align-items: flex-start;
-        flex-direction: column;
-        padding-block: 15px;
+    @keyframes photo-glow {
+      0%, 100% {
+        box-shadow: 0 0 25px rgba(216, 181, 104, 0.10);
+      }
+      50% {
+        box-shadow: 0 0 38px rgba(216, 181, 104, 0.22);
+      }
+    }
+
+    /* Responsive design */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 14px;
       }
 
-      nav {
-        justify-content: flex-start;
-        gap: 12px;
+      .nav-links a {
+        font-size: 0.72rem;
+      }
+
+      .hero-layout {
+        grid-template-columns: minmax(0, 1fr) 230px;
+        gap: 32px;
+      }
+
+      .research-grid,
+      .directions-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      .nav-inner {
+        padding-block: 13px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 8px 17px;
+      }
+
+      .nav-links a {
+        font-size: 0.74rem;
       }
 
       .hero {
         min-height: auto;
       }
 
-      .hero-content {
-        padding-block: 75px;
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-block: 48px 60px;
       }
 
+      .hero-photo-wrap {
+        width: 210px;
+        max-width: 75%;
+        margin-inline: auto;
+        grid-row: 1;
+      }
+
+      .hero-content {
+        grid-row: 2;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .about-grid,
       .research-grid,
-      .research-directions {
+      .directions-grid {
         grid-template-columns: 1fr;
       }
 
-      section {
-        padding-block: 62px;
+      .about-grid {
+        gap: 30px;
+      }
+
+      .research-card {
+        padding: 24px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
       *,
       *::before,
       *::after {
-        animation: none !important;
-        transition: none !important;
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#home">Rishal Pathuthara</a>
 
-      <nav aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#education">Education</a>
-        <a href="#directions">Future Work</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <!-- Navigation -->
+  <header class="navbar">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a class="brand" href="#home">Rishal <span>Pathuthara</span></a>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#directions">Research Vision</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
+
+    <!-- Hero / Homepage -->
     <section class="hero" id="home">
-      <div class="container hero-content">
-        <div class="eyebrow">
-          Academic Profile · Research · Innovation
+      <div class="hero-layout">
+
+        <div class="hero-content">
+          <div class="eyebrow">Academic Profile &amp; Research Portfolio</div>
+
+          <h1>
+            Rishal<br>
+            <span>Pathuthara</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            PhD Scholar | Oral Pathology | Artificial Intelligence in Oral Health
+          </p>
+
+          <p class="intro">
+            Exploring the intersection of oral health sciences, clinical
+            research, and artificial intelligence to support evidence-informed
+            approaches to oral lesion assessment and oral cancer detection.
+          </p>
+
+          <div class="affiliation">
+            Faculty of Dental Medicine and Oral Health Sciences<br>
+            McGill University, Montréal, Québec, Canada
+          </div>
+
+          <div class="actions">
+            <a class="btn btn-primary" href="#research">Explore Research</a>
+            <a class="btn btn-secondary" href="#contact">Professional Profiles</a>
+          </div>
         </div>
 
-        <h1>
-          PhD Scholar <span>| AI in Healthcare</span>
-          | Research &amp; Innovation
-        </h1>
-
-        <p class="intro">
-          Exploring the intersection of artificial intelligence,
-          oral health sciences and clinical research, with an
-          interest in developing evidence-informed approaches
-          to oral cancer detection and clinical decision support.
-        </p>
-
-        <div class="affiliation">
-          PhD Scholar<br>
-          Faculty of Dental Medicine and Oral Health Sciences<br>
-          <span>McGill University · Montreal, Quebec, Canada</span>
+        <div class="hero-photo-wrap">
+          <img
+            src="rishal-photo.jpg"
+            alt="Portrait of Rishal Pathuthara"
+            class="hero-photo"
+            width="400"
+            height="500"
+            fetchpriority="high"
+          >
         </div>
 
-        <div class="actions">
-          <a class="button primary" href="#research">
-            Explore Research
-          </a>
-          <a class="button" href="#contact">
-            Connect Professionally
-          </a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">About Me</div>
+          <h2>Clinical Foundations.<br><span class="gold">Research-Driven Innovation.</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              I am a PhD Scholar at McGill University's Faculty of Dental
+              Medicine and Oral Health Sciences, with academic training in
+              dentistry and oral pathology and microbiology.
+            </p>
+
+            <p>
+              My research interests focus on the potential role of artificial
+              intelligence in oral healthcare, including oral lesion
+              assessment, early oral cancer detection, clinical history
+              taking, and evidence-informed decision support.
+            </p>
+
+            <p>
+              I am particularly interested in connecting clinical needs with
+              rigorous evidence, responsible AI development, and approaches
+              that can be evaluated for their relevance to real-world dental
+              practice.
+            </p>
+          </div>
+
+          <aside class="profile-panel">
+            <div class="profile-item">
+              <span class="profile-label">Current Role</span>
+              <span class="profile-value">PhD Scholar</span>
+            </div>
+
+            <div class="profile-item">
+              <span class="profile-label">Institution</span>
+              <span class="profile-value">McGill University</span>
+            </div>
+
+            <div class="profile-item">
+              <span class="profile-label">Clinical Background</span>
+              <span class="profile-value">Bachelor of Dental Surgery (BDS)</span>
+            </div>
+
+            <div class="profile-item">
+              <span class="profile-label">Postgraduate Training</span>
+              <span class="profile-value">Master of Dental Surgery (MDS), Oral Pathology and Microbiology</span>
+            </div>
+
+            <div class="profile-item">
+              <span class="profile-label">Research Interests</span>
+              <span class="profile-value">Oral Oncology, AI in Dentistry, Clinical Evidence, Digital Health</span>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
 
-    <section id="about">
+    <!-- Research Projects -->
+    <section class="section research-section" id="research">
       <div class="container">
-        <div class="section-label">Introduction</div>
-        <h2>About Me</h2>
-        <div class="gold-line"></div>
-
-        <p class="description">
-          I am a PhD Scholar at the Faculty of Dental Medicine
-          and Oral Health Sciences, McGill University. My
-          academic qualifications include a Bachelor of Dental
-          Surgery (BDS) and a Master of Dental Surgery (MDS)
-          in Oral Pathology and Microbiology.
-
-          <br><br>
-
-          My research interests include artificial intelligence
-          in healthcare, oral lesion assessment, early oral
-          cancer detection and evidence-informed clinical
-          decision support. I am interested in how multimodal
-          AI, privacy-preserving learning and structured
-          clinical information may contribute to clinically
-          useful research tools.
-        </p>
-      </div>
-    </section>
-
-    <section class="dark-section" id="research">
-      <div class="container">
-        <div class="section-label">Research Portfolio</div>
-        <h2>Research Projects</h2>
-
-        <p class="section-intro">
-          My research interests span AI-assisted oral lesion
-          assessment, privacy-aware model development and
-          the translation of clinical evidence into practice.
-        </p>
+        <div class="section-heading">
+          <div class="eyebrow">Research Portfolio</div>
+          <h2>Areas of <span class="gold">Research Interest</span></h2>
+          <p>
+            Research directions at the intersection of oral medicine,
+            artificial intelligence, and evidence-informed clinical practice.
+          </p>
+        </div>
 
         <div class="research-grid">
-          <article class="card">
-            <div class="card-number">PROJECT 01</div>
+
+          <article class="research-card">
+            <div class="card-number">01</div>
             <h3>Federated Multimodal AI for Oral Cancer Detection</h3>
-
             <p>
-              Investigating privacy-preserving multimodal
-              artificial intelligence approaches for early
-              oral cancer detection by integrating oral lesion
-              images with relevant clinical information across
-              participating institutions.
+              Exploring privacy-preserving AI approaches that combine oral
+              lesion images with relevant clinical information. Federated
+              learning may offer a way to investigate model development across
+              institutions while keeping data at its source, subject to
+              appropriate privacy and governance safeguards.
             </p>
-
-            <div class="tag-list">
-              <span class="tag">Federated Learning</span>
-              <span class="tag">Multimodal AI</span>
-              <span class="tag">Oral Cancer</span>
-            </div>
+            <span class="research-tag">AI · Oral Oncology · Privacy</span>
           </article>
 
-          <article class="card">
-            <div class="card-number">PROJECT 02</div>
-            <h3>Lesion-Aware Conversational AI for Clinical History Taking</h3>
-
+          <article class="research-card">
+            <div class="card-number">02</div>
+            <h3>Lesion-Aware Conversational AI</h3>
             <p>
-              Exploring an AI-assisted workflow that generates
-              relevant follow-up questions based on the type
-              of oral lesion and available clinical information.
-              The resulting history could be combined with
-              lesion images to support a more informed
-              clinical assessment.
+              Exploring conversational systems that adapt clinical history
+              questions to the characteristics of an oral lesion and combine
+              the collected history with image-based assessment. The aim is
+              to investigate whether this could support more structured
+              information gathering by dental professionals.
             </p>
-
-            <div class="tag-list">
-              <span class="tag">Conversational AI</span>
-              <span class="tag">Clinical Reasoning</span>
-              <span class="tag">Image + History</span>
-            </div>
+            <span class="research-tag">Conversational AI · Clinical Assessment</span>
           </article>
 
-          <article class="card">
-            <div class="card-number">PROJECT 03</div>
-            <h3>Evidence-Informed AI Implementation for Oral Lesion Management</h3>
-
+          <article class="research-card">
+            <div class="card-number">03</div>
+            <h3>Evidence-Informed AI for Oral Lesion Management</h3>
             <p>
-              Developing an implementation framework for
-              AI-assisted oral lesion detection, risk
-              stratification and evidence-linked management
-              recommendations for clinician review, including
-              appropriate referral and further investigation.
+              Exploring how clinical evidence and practice guidelines could
+              inform AI-assisted oral lesion assessment, risk stratification,
+              and management support. Potential areas include referral and
+              biopsy considerations, evidence mapping, clinical validation,
+              and appropriate clinician oversight.
             </p>
-
-            <div class="tag-list">
-              <span class="tag">Implementation Science</span>
-              <span class="tag">Clinical Decision Support</span>
-              <span class="tag">Evidence Synthesis</span>
-            </div>
+            <span class="research-tag">Evidence Synthesis · Clinical Decision Support</span>
           </article>
+
         </div>
+
+        <p class="note">
+          These entries describe research interests and proposed directions;
+          they should not be interpreted as claims that the systems described
+          have been developed, clinically validated, or implemented.
+        </p>
       </div>
     </section>
 
-    <section id="education">
+    <!-- Education -->
+    <section class="section" id="education">
       <div class="container">
-        <div class="section-label">Academic Background</div>
-        <h2>Education &amp; Qualifications</h2>
-        <div class="gold-line"></div>
+        <div class="section-heading">
+          <div class="eyebrow">Academic Background</div>
+          <h2>Education &amp; <span class="gold">Training</span></h2>
+        </div>
 
         <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-mark">✦</div>
-            <div>
-              <h3>PhD Scholar</h3>
-              <p>
-                Faculty of Dental Medicine and Oral Health Sciences,
-                McGill University, Montreal, Canada.
-              </p>
-            </div>
-          </div>
 
-          <div class="timeline-item">
-            <div class="timeline-mark">✦</div>
-            <div>
-              <h3>Master of Dental Surgery (MDS)</h3>
-              <p>Oral Pathology and Microbiology.</p>
-            </div>
-          </div>
+          <article class="timeline-item">
+            <div class="timeline-meta">Current Academic Position</div>
+            <h3>PhD Scholar</h3>
+            <p>
+              Faculty of Dental Medicine and Oral Health Sciences,
+              McGill University, Montréal, Québec, Canada.
+            </p>
+          </article>
 
-          <div class="timeline-item">
-            <div class="timeline-mark">✦</div>
-            <div>
-              <h3>Bachelor of Dental Surgery (BDS)</h3>
-              <p>Dental Surgery.</p>
-            </div>
-          </div>
+          <article class="timeline-item">
+            <div class="timeline-meta">Postgraduate Degree</div>
+            <h3>Master of Dental Surgery (MDS)</h3>
+            <p>Oral Pathology and Microbiology.</p>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">Professional Degree</div>
+            <h3>Bachelor of Dental Surgery (BDS)</h3>
+            <p>Foundational training in dentistry and oral healthcare.</p>
+          </article>
+
         </div>
+
+        <p class="note">
+          Add your degree-awarding institutions, graduation years, thesis
+          titles, and relevant awards when you are ready to include them.
+        </p>
       </div>
     </section>
 
-    <section class="dark-section" id="directions">
+    <!-- Research Vision -->
+    <section class="section research-section" id="directions">
       <div class="container">
-        <div class="section-label">Research Development</div>
-        <h2>Evidence, Guidelines &amp; Future Directions</h2>
+        <div class="section-heading">
+          <div class="eyebrow">Future Directions</div>
+          <h2>A Vision for <span class="gold">Responsible Innovation</span></h2>
+          <p>
+            Building a bridge between promising technology, credible clinical
+            evidence, and practical needs in oral healthcare.
+          </p>
+        </div>
 
-        <p class="section-intro">
-          Additional research directions that connect AI
-          development with evidence quality, clinical validation
-          and responsible implementation.
-        </p>
+        <div class="directions-grid">
 
-        <div class="research-directions">
           <article class="direction">
             <h3>Evidence Mapping</h3>
             <p>
-              Mapping diagnostic and management evidence across
-              oral lesions to identify research gaps, evidence
-              limitations and priorities for future studies.
+              Identifying existing evidence, knowledge gaps, methodological
+              limitations, and research priorities in AI-assisted oral lesion
+              assessment and management.
             </p>
           </article>
 
           <article class="direction">
-            <h3>Clinical Guidelines</h3>
+            <h3>Clinical Guidance</h3>
             <p>
-              Assessing the evidence base behind existing
-              clinical practice guidelines and identifying
-              areas that may warrant systematic review,
-              updating or guideline development.
+              Exploring the evidence base for clinical recommendations and
+              practice guidelines, including whether new guidance or updates
+              are justified by available evidence.
             </p>
           </article>
 
           <article class="direction">
-            <h3>Clinical Validation</h3>
+            <h3>Clinical Validation &amp; Safety</h3>
             <p>
-              Exploring diagnostic performance, generalizability,
-              safety, clinician usability and implementation
-              requirements for AI-assisted clinical tools.
+              Considering validation, bias, privacy, transparency, and
+              clinician oversight as essential elements of responsible AI
+              evaluation for dental practice.
             </p>
           </article>
+
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <div class="container">
-        <div class="contact-box">
-          <div class="section-label">Professional Networking</div>
-          <h2>Let's Connect</h2>
+    <!-- Contact -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-content">
+        <div class="eyebrow">Connect</div>
+        <h2>Let's Connect <span class="gold">Professionally</span></h2>
 
-          <p class="description">
-            I welcome academic discussion, research collaboration
-            and professional networking in AI, healthcare and
-            oral health sciences.
-          </p>
+        <p>
+          For academic networking, research discussions, and potential
+          collaborations in oral health sciences, oral pathology, and
+          artificial intelligence in dentistry, please visit my professional
+          profiles.
+        </p>
 
-          <div class="contact-details">
-            <div>
-              <strong>Institution</strong><br>
-              McGill University, Montreal, Quebec, Canada
-            </div>
+        <div class="contact-links">
+          <a
+            class="contact-link"
+            href="https://www.linkedin.com/in/rishal-mohammed-pathuthara-a25235196"
+            target="_blank"
+            rel="noopener noreferrer"
+          >LinkedIn ↗</a>
 
-            <div>
-              <strong>Academic Affiliation</strong><br>
-              Faculty of Dental Medicine and Oral Health Sciences
-            </div>
-
-            <!-- Add your professional email here when ready. -->
-
-            <!-- Consider removing the phone number if you prefer
-                 not to publish it on a public website. -->
-            <div>
-              <strong>Phone</strong><br>
-              <a href="tel:2635569402">263 5569402</a>
-            </div>
-          </div>
-
-          <div class="social-links">
-            <a
-              href="https://www.linkedin.com/in/rishal-mohammed-pathuthara-a25235196"
-              target="_blank"
-              rel="noopener noreferrer">
-              LinkedIn ↗
-            </a>
-
-            <!-- Replace RESEARCHGATE_PROFILE_URL with your real
-                 ResearchGate profile URL before enabling this link. -->
-            <a
-              href="https://www.researchgate.net/profile/Rishal-Pathuthara/research"
-              target="_blank"
-              rel="noopener noreferrer">
-              ResearchGate ↗
-            </a>
-          </div>
+          <a
+            class="contact-link"
+            href="https://www.researchgate.net/profile/Rishal-Pathuthara/research"
+            target="_blank"
+            rel="noopener noreferrer"
+          >ResearchGate ↗</a>
         </div>
       </div>
     </section>
+
   </main>
 
+  <!-- Footer -->
   <footer>
-    <div class="container">
-      © 2026 Rishal Pathuthara ·
-      <span>Academic Portfolio</span>
+    <div class="container footer-inner">
+      <p>© <span id="current-year">2026</span> Rishal Pathuthara</p>
+      <p>Academic Profile &amp; Research Portfolio</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+  </script>
+
 </body>
 </html>
