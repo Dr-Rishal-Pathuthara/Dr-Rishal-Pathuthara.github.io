@@ -35,7 +35,7 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 85px;
+      scroll-padding-top: 100px;
     }
 
     body {
@@ -113,7 +113,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(8, 8, 8, 0.94);
+      background: rgba(8, 8, 8, 0.95);
       border-bottom: 1px solid var(--border);
       backdrop-filter: blur(14px);
     }
@@ -142,18 +142,17 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 20px;
       list-style: none;
     }
 
     .nav-links a {
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       color: var(--muted);
       transition: color 0.25s ease;
     }
 
-    .nav-links a:hover,
-    .nav-links a:focus-visible {
+    .nav-links a:hover {
       color: var(--gold);
     }
 
@@ -179,7 +178,6 @@
       border-radius: 50%;
       right: -130px;
       bottom: -170px;
-      pointer-events: none;
     }
 
     .hero-layout {
@@ -324,7 +322,7 @@
       font-size: 0.92rem;
     }
 
-    /* Research cards */
+    /* Research */
 
     .research-section {
       background: #0c0c0c;
@@ -424,6 +422,48 @@
       font-size: 0.78rem;
       letter-spacing: 0.04em;
       margin-bottom: 8px;
+    }
+
+    /* Awards */
+
+    .award-card {
+      max-width: 850px;
+      padding: 32px;
+      border: 1px solid var(--gold);
+      border-left: 4px solid var(--gold);
+      background:
+        radial-gradient(ellipse at 90% 10%, rgba(216, 181, 104, 0.10), transparent 55%),
+        linear-gradient(145deg, #151515, #0b0b0b);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .award-card h3 {
+      color: var(--gold-light);
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .award-card p {
+      max-width: 700px;
+    }
+
+    .award-issuer {
+      display: block;
+      margin-top: 16px;
+      color: var(--gold);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .award-recognition {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      color: var(--gold-light);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
 
     /* Future directions */
@@ -537,10 +577,6 @@
         gap: 14px;
       }
 
-      .nav-links a {
-        font-size: 0.72rem;
-      }
-
       .hero-layout {
         grid-template-columns: minmax(0, 1fr) 230px;
         gap: 32px;
@@ -609,6 +645,14 @@
         padding: 24px;
       }
 
+      .award-card {
+        padding: 24px;
+      }
+
+      .award-card h3 {
+        font-size: 1.7rem;
+      }
+
       .footer-inner {
         flex-direction: column;
       }
@@ -638,6 +682,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#research">Research</a></li>
         <li><a href="#education">Education</a></li>
+        <li><a href="#awards">Awards</a></li>
         <li><a href="#directions">Research Vision</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -646,7 +691,7 @@
 
   <main>
 
-    <!-- Hero / Homepage -->
+    <!-- Homepage -->
     <section class="hero" id="home">
       <div class="hero-layout">
 
@@ -675,7 +720,7 @@
 
           <div class="actions">
             <a class="btn btn-primary" href="#research">Explore Research</a>
-            <a class="btn btn-secondary" href="#contact">Professional Profiles</a>
+            <a class="btn btn-secondary" href="#awards">Awards & Recognition</a>
           </div>
         </div>
 
@@ -746,6 +791,13 @@
             </div>
 
             <div class="profile-item">
+              <span class="profile-label">Research Award</span>
+              <span class="profile-value">
+                Canada Impact+ Research Training Award — CIHR
+              </span>
+            </div>
+
+            <div class="profile-item">
               <span class="profile-label">Research Interests</span>
               <span class="profile-value">Oral Oncology, AI in Dentistry, Clinical Evidence, Digital Health</span>
             </div>
@@ -754,7 +806,7 @@
       </div>
     </section>
 
-    <!-- Research Projects -->
+    <!-- Research -->
     <section class="section research-section" id="research">
       <div class="container">
         <div class="section-heading">
@@ -857,8 +909,40 @@
       </div>
     </section>
 
+    <!-- Awards and Recognition -->
+    <section class="section research-section" id="awards">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Awards &amp; Recognition</div>
+          <h2>Research <span class="gold">Recognition</span></h2>
+          <p>
+            Recognition supporting research training and academic development.
+          </p>
+        </div>
+
+        <article class="award-card">
+          <div class="eyebrow">Research Training Award</div>
+
+          <h3>Canada Impact+ Research Training Award</h3>
+
+          <p>
+            Recipient of the Canada Impact+ Research Training Award,
+            supporting research training and development.
+          </p>
+
+          <span class="award-issuer">
+            Canadian Institutes of Health Research (CIHR)
+          </span>
+
+          <span class="award-recognition">
+            Award Recipient
+          </span>
+        </article>
+      </div>
+    </section>
+
     <!-- Research Vision -->
-    <section class="section research-section" id="directions">
+    <section class="section" id="directions">
       <div class="container">
         <div class="section-heading">
           <div class="eyebrow">Future Directions</div>
