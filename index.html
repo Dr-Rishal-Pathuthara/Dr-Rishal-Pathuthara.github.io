@@ -236,8 +236,8 @@ header {
 .portrait img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    object-position: center;
+    object-fit: cover;
+    object-position: center top;
     display: block;
 }
 
@@ -728,10 +728,10 @@ footer {
         <div class="portrait-wrap">
             <div class="portrait">
                 <img
-                    src="./rishal-photo.png"
+                    src="./rishal-photo.PNG"
                     alt="Portrait of Dr. Rishal Mohammed Pathuthara"
                     loading="eager"
-                    onerror="this.style.display='none'; this.parentElement.style.border='2px dashed #d6b36a';"
+                    onerror="console.error('Profile photo failed to load:', this.src); this.alt='Profile photograph unavailable';"
                 >
             </div>
         </div>
